@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Roboto:300,400,500,700,900');
+
+/*
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+*/
+
+$body-font: 'Roboto', sans-serif;
+$heading-font: 'Open Sans', sans-serif;
+$yellow: #fdd947;
+$black: #000;
+
 /*--------------*/
 @mixin trans($time: 0.2s){
     transition: all $time ease;
@@ -16,7 +28,34 @@
     
     &:hover{
         background: #fff !important;
-        color: #444 !important;
+        color: $black !important;
+    }
+}
+
+.primary-button{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $black;
+    border: solid 3px $black;
+    padding: 10px 18px;
+    font-weight: bold;
+    text-decoration: none !important;
+    @include trans;
+    
+    &:hover{
+        border: solid 3px #000;
+        color: #fff;
+        background: $black;
+    }
+}
+
+.btn-black{
+    background: $black;
+    color: #fff;
+    
+    &:hover{
+        background: transparent;
+        color: $black;
     }
 }
 /*--------------*/
@@ -28,6 +67,49 @@
 body{
     background: #f5f5f5;
     margin: 0;
+    font-family: $body-font;
+    overflow-x: hidden !important;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: $heading-font;
+}
+
+a{
+    color: $black;
+    text-decoration: none !important;
+    
+    &:hover{
+        color: $yellow;
+    }
+}
+
+.bar-heading{
+    &:after{
+        content: '';
+        display: block;
+        width: 60%;
+        height: 8px;
+        background: $yellow;
+        margin: 60px 0px;
+    }
+}
+
+.section-heading{
+    @extend .bar-heading;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 36px;
+    margin-top: 0 !important;
+    color: $black;
+    
+    &:after{
+        height: 5px !important;
+        width: 100% !important;
+        margin: 10px 0px !important;
+        display: block;
+    }
 }
 
 .container-fluid{
@@ -37,19 +119,29 @@ body{
     }
 }
 
+.section-pad{
+    padding: 100px 0px;
+}
+
+.whitebg{
+    background: #fff;
+}
+
 header{
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     margin: 0 auto;
+    z-index: 9999;
     
     .navbar-default{
         border-radius: 0 !important;
         background: transparent;
         border: none;
-        border-bottom: solid 1px rgba(255,255,255,0.3);
+        border-bottom: solid 1px rgba(255,255,255,0.2);
+        padding: 10px 0px;
     }
     
     .navbar-brand{
@@ -97,13 +189,161 @@ header{
 }
 
 .slider{
+    cursor: move;
+    position: relative;
+    
     img{
         width: 100%;
-        height: auto;
-        min-height: 500px;
+        height: 100vh;
+        min-height: 600px;
         object-fit: cover;
     }
+    
+    .slide-text{
+        padding: 150px 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 12.5%;
+        
+        h2{
+            font-size: 100px;
+            color: #fff;
+            width: 80%;
+            font-weight: 900;
+        }
+        
+        p{
+            font-size: 18px;
+            font-weight: 300;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    }
 }
+
+.sub-heading{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+.about-sec{
+    @extend .section-pad, .whitebg;
+    
+    p{
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 10px;
+        line-height: 26px;
+    }
+}
+
+.flex-center{
+    display: flex;
+    align-items: center;
+}
+
+.about-icons-con{
+    .row{
+        margin-top: 30px;
+        div{
+            padding: {
+                left: 20px;
+                right: 20px;
+            }
+        }
+    }
+    
+    i.fa{
+        font-size: 52px;
+        display: block;
+        margin-bottom: 15px;
+        color: #ccc;
+    }
+    
+    b{
+        font-size: 16px;
+        font-family: $heading-font;
+    }
+    
+    p{
+        font-size: 16px;
+        margin-top: 5px;
+    }
+}
+
+.services-sec{
+    @extend .about-sec;
+    padding: 0 0;
+    
+    background: url(https://www.singlespeed.ca/file/2016/01/singlespeedTeamSlideBackgroundComp.jpg) center center fixed;
+    background-size: cover;
+    
+    .lightgraybg{
+        padding: 0 !important;
+    }
+}
+
+.lightgraybg{
+    background: #f5f5f5;
+}
+
+.services-icons-con{
+    @extend .about-icons-con;
+    padding: 50px 50px;
+    
+    .row{
+        margin: 0 !important;
+        
+        div{
+            padding: 50px 50px;
+            text-align: center;
+            min-height: 200px;
+            border: solid 5px transparent;
+            @include trans;
+            cursor: default;
+            
+            i.fa{
+                color: $yellow;
+            }
+            
+            p{
+                font-size: 14px;
+                line-height: 24px;
+            }
+            
+            &:hover{
+                border-color: $yellow;
+                background: #fff;
+            }
+        }
+    }
+}
+
+.work-with-us-sec{
+    background: $yellow;
+    color: $black;
+    padding: 60px 0px;
+    text-align: center;
+    
+    i.fa{
+        font-size: 72px;
+        font-weight: 300;
+    }
+}
+
+.contact-sec{
+    @extend .whitebg, .section-pad;
+}
+
+.mt85{
+    margin-top: 85px;
+}
+
+
 
 
 
