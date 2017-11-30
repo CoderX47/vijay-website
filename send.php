@@ -13,7 +13,7 @@
                    ."Reply-To: ".$email."\n"
                    ."From: $name \n"
                    ."Content-type: text/html; charset=iso-8859-1\n";
-        $mail_to = "CoderXNk@gmail.com";
+        $mail_to = "";
         
         $body = "<table>"
                     ."<tr>"
