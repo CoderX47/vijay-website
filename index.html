@@ -10,6 +10,7 @@
     <!-- Stylesheets -->
     <link href="../vijay-website/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../vijay-website/css/style.css">
+    <link rel="stylesheet" href="../vijay-website/css/responsive.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,15 +44,15 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <!--left nav-->
                         <ul class="nav navbar-nav">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
 
                         <!--right nav-->
                         <ul class="nav navbar-nav navbar-right">
                             <li>LET'S WORK TOGETHER</li>
-                            <li><a href="#" class="white-border-button">
+                            <li><a href="#contact" class="white-border-button">
                             START NOW</a></li>
                         </ul>
                     </div>
@@ -64,18 +65,62 @@
     <!--slider-->
     <section>
         <div class="container-fluid">
+            <a name="top"></a>
             <div class="slider">
-                <img src="../vijay-website/images/slide.jpg" alt="">
-                <!--text-->
-                <div class="slide-text">
-                    <div class="container">
-                        <h2 class="bar-heading">LOREM IPSUM DOLOR SIT</h2>
-                        <p>
-                            We make websites that look awesome, load fast, help your business grow.
-                        </p>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="../vijay-website/images/slide.jpg" alt="Los Angeles">
+                        
+                        <div class="slide-text">
+                            <div class="container">
+
+                                <h2 class="bar-heading">LOREM IPSUM DOLOR SIT</h2>
+                                <p>
+                                    We make websites that look awesome, load fast, help your business grow.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="../vijay-website/images/slide.jpg" alt="Chicago">
+                        
+                        <div class="slide-text">
+                            <div class="container">
+
+                                <h2 class="bar-heading">LOREM IPSUM DOLOR SIT</h2>
+                                <p>
+                                    We make websites that look awesome, load fast, help your business grow.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="../vijay-website/images/slide.jpg" alt="New York">
+                        
+                        <div class="slide-text">
+                            <div class="container">
+
+                                <h2 class="bar-heading">LOREM IPSUM DOLOR SIT</h2>
+                                <p>
+                                    We make websites that look awesome, load fast, help your business grow.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!--/text-->
+
+            </div>
             </div>
         </div>
     </section>
@@ -83,10 +128,13 @@
     
     <!--about-->
     <section>
+        <a name="about"></a>
+            
         <div class="container-fluid about-sec">
             <div class="container">
                 <div class="row flex-center">
-                    <div class="col-md-5 col-sm-5 col-xs-12">
+                    <div class="col-md-5 col-sm-12 col-xs-12">
+                        
                         <h2 class="section-heading">About Us</h2>
                         <h6 class="sub-heading">
                             We make beautiful websites and apps. We help plan and execute your online marketing strategy.
@@ -105,9 +153,9 @@
                         <a href="#" class="primary-button">Our Services</a>
                     </div>
                     
-                    <div class="col-md-1 col-sm-1 hidden-xs"></div>
+                    <div class="col-md-1 hidden-sm hidden-xs"></div>
                     
-                    <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="about-icons-con">
                             <div class="row">
                                 <div class="col-md-6 col-sm-6 col-xs-12">
@@ -158,11 +206,12 @@
     <section>
         <div class="container-fluid services-sec">
             <div class="row">
-                <div class="col-md-6 col-sm-6 hidden-xs">
+                <a name="services"></a>
+                <div class="col-md-6 hidden-sm hidden-xs">
                     <!--blank-->
                 </div>
 
-                <div class="lightgraybg col-md-6 col-sm-6 col-xs-12">
+                <div class="lightgraybg col-md-6 col-sm-12 col-xs-12">
                     <div class="services-icons-con">
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -211,6 +260,7 @@
     <!--work with us-->
     <section>
         <div class="container-fluid work-with-us-sec">
+            <a name="contact"></a>
             <div class="container">
                 <i class="fa fa-comments-o"></i>
                 <h2>WANT TO WORK WITH US?</h2>
@@ -232,7 +282,7 @@
         <div class="container-fluid contact-sec">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
                         <h2 class="section-heading">
                             CONTACT US TODAY
                         </h2>
@@ -263,11 +313,11 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
                         <h3 class="contact-tell-heading">
                             <a href="#">
                             <i class="fa fa-phone"></i> (204) 804-7620</a> 
-                            &nbsp;|&nbsp;
+                            <br><br>
                             <a href="#">
                             <i class="fa fa-envelope-o"></i>hello@singlespeed.ca</a>
                         </h3>
@@ -323,7 +373,7 @@
             <div class="container">
                 &copy; 2017 SINGLESPEED ONLINE MARKETING
                 
-                <a href="#" class="go-top pull-right">
+                <a href="#top" class="go-top pull-right">
                 <i class="fa fa-arrow-up"></i></a>
             </div>
         </div>
@@ -347,8 +397,10 @@
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../vijay-website/js/functions.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../vijay-website/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/742ef79b3c.js"></script>
+    <script src="../vijay-website/js/smooth.js"></script>
 </body>
 </html>
