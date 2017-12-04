@@ -221,11 +221,6 @@ header{
             height: 100vh;
             min-height: 600px;
             object-fit: cover;
-            
-            @media screen and (max-width:768px){
-                height: auto !important;
-                min-height: auto !important;
-            }
         }
     
         .slide-text{
@@ -236,10 +231,6 @@ header{
             margin: 0 auto;
             top: 12.5%;
             
-            @media screen and (max-width:768px){
-                padding: 70px 0px 150px 0px !important;
-            }
-
             h2{
                 font-size: 100px;
                 color: #fff;
@@ -513,7 +504,8 @@ header{
         margin: 0 auto;
     }
     
-    .slide-text h2{
+    .slide-text h2,
+    .slide-text p{
         text-align: left !important;
     }
     

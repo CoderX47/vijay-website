@@ -152,10 +152,6 @@ header {
     height: 100vh;
     min-height: 600px;
     object-fit: cover; }
-    @media screen and (max-width: 768px) {
-      .slider .item img {
-        height: auto !important;
-        min-height: auto !important; } }
   .slider .item .slide-text {
     padding: 150px 0;
     position: absolute;
@@ -163,9 +159,6 @@ header {
     right: 0;
     margin: 0 auto;
     top: 12.5%; }
-    @media screen and (max-width: 768px) {
-      .slider .item .slide-text {
-        padding: 70px 0px 150px 0px !important; } }
     .slider .item .slide-text h2 {
       font-size: 100px;
       color: #fff;
@@ -360,7 +353,8 @@ header {
     text-align: center;
     margin: 0 auto; }
 
-  .slide-text h2 {
+  .slide-text h2,
+  .slide-text p {
     text-align: left !important; }
 
   .sm-contact-box {
