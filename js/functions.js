@@ -8,24 +8,5 @@ $(document).ready(function(){
     });
 });
 
-/*$(document).ready(function(){
-    $('.item').on('click', function(){
-        if($('.carousel-indicators li').next() != 0){
-            $('.carousel-indicators li').click();
-        }else{
-            $('.carousel-indicators li').prev().click();
-        }        
-    });
-});*/
 
-$(".carousel").swipe({
 
-  swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-
-    if (direction == 'left') $(this).carousel('next');
-    if (direction == 'right') $(this).carousel('prev');
-
-  },
-  allowPageScroll:"vertical"
-
-});
