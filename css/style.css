@@ -91,6 +91,20 @@ a {
 .whitebg, .about-sec, .services-sec, .contact-sec, .footer {
   background: #fff; }
 
+@media screen and (max-width: 768px) {
+  .navbar-collapse {
+    border: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
+    .navbar-collapse li a {
+      padding: 8px 15px !important; } }
+
+.navbar-toggle {
+  background: transparent !important;
+  border: none !important; }
+  .navbar-toggle span {
+    background: #fff !important; }
+
 header {
   width: 100%;
   position: fixed;
@@ -138,6 +152,10 @@ header {
     height: 100vh;
     min-height: 600px;
     object-fit: cover; }
+    @media screen and (max-width: 768px) {
+      .slider .item img {
+        height: auto !important;
+        min-height: auto !important; } }
   .slider .item .slide-text {
     padding: 150px 0;
     position: absolute;
@@ -145,6 +163,9 @@ header {
     right: 0;
     margin: 0 auto;
     top: 12.5%; }
+    @media screen and (max-width: 768px) {
+      .slider .item .slide-text {
+        padding: 70px 0px 150px 0px !important; } }
     .slider .item .slide-text h2 {
       font-size: 100px;
       color: #fff;
@@ -332,5 +353,22 @@ header {
 
 .black-header {
   background: #000 !important; }
+
+/*---------------------*/
+@media screen and (max-width: 768px) {
+  div {
+    text-align: center;
+    margin: 0 auto; }
+
+  .slide-text h2 {
+    text-align: left !important; }
+
+  .sm-contact-box {
+    margin: 0 auto !important;
+    display: inline-block !important; }
+    .sm-contact-box i {
+      margin: 0px 15px 0px 30px !important; } }
+.img-div {
+  min-height: 250px; }
 
 /*# sourceMappingURL=style.css.map */

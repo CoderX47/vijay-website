@@ -127,6 +127,29 @@ a{
     background: #fff;
 }
 
+.navbar-collapse{
+    @media screen and (max-width:768px){
+        border: none !important;
+        padding: {
+            left: 0 !important;
+            right: 0 !important;
+        }
+        
+        li a{
+            padding: 8px 15px !important;
+        }
+    }
+}
+
+.navbar-toggle{
+    background: transparent !important;
+    border: none !important;
+    
+    span{
+        background: #fff !important;
+    }
+}
+
 header{
     width: 100%;
     position: fixed;
@@ -142,6 +165,7 @@ header{
         border: none;
         border-bottom: solid 1px rgba(255,255,255,0.2);
         padding: 10px 0px;
+        
     }
     
     .navbar-brand{
@@ -197,6 +221,11 @@ header{
             height: 100vh;
             min-height: 600px;
             object-fit: cover;
+            
+            @media screen and (max-width:768px){
+                height: auto !important;
+                min-height: auto !important;
+            }
         }
     
         .slide-text{
@@ -206,6 +235,10 @@ header{
             right: 0;
             margin: 0 auto;
             top: 12.5%;
+            
+            @media screen and (max-width:768px){
+                padding: 70px 0px 150px 0px !important;
+            }
 
             h2{
                 font-size: 100px;
@@ -470,6 +503,32 @@ header{
 
 .black-header{
     background: #000 !important;
+}
+
+/*---------------------*/
+
+@media screen and (max-width:768px){
+    div{
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .slide-text h2{
+        text-align: left !important;
+    }
+    
+    .sm-contact-box{
+        margin: 0 auto !important;
+        display: inline-block !important;
+        
+        i{
+            margin: 0px 15px 0px 30px !important;
+        }
+    }
+}
+
+.img-div{
+    min-height: 250px;
 }
 
 
