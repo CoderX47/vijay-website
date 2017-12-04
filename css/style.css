@@ -354,7 +354,8 @@ header {
     margin: 0 auto; }
 
   .slide-text h2,
-  .slide-text p {
+  .slide-text p,
+  .navbar-nav {
     text-align: left !important; }
 
   .sm-contact-box {
